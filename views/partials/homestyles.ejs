@@ -1,0 +1,127 @@
+<style>
+  .owl-nav {
+    translate: 0px 50px;
+
+    & button span {
+      color: var(--white);
+      padding-inline: 25px;
+      padding-block: 6px;
+      font-weight: bolder;
+      font-size: 18px;
+      background-color: var(--theme-brown);
+      margin-left: 10px;
+      border-radius: 5px;
+    }
+  }
+  #modal2 {
+    & form input {
+      background-color: rgba(255, 255, 255, 0.293) !important;
+      box-shadow: inset 0 0.0625em 0.125em var(--theme-color);
+    }
+
+    & .modal-card {
+      border: 5px solid var(--theme-color);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: linear-gradient(
+          rgba(255, 255, 255, 0.851) 50%,
+          rgba(255, 255, 255, 0.725)
+        ),
+        url("/images/android-chrome-512x512.png");
+    }
+  }
+
+  ::placeholder,
+  #modal2 form input {
+    font-family: "Raleway", system-ui;
+  }
+
+  .lightbox {
+    & .is-flex-grow-1 {
+      position: relative;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    & .is-flex-grow-1 > * {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    & .is-flex-grow-1 {
+      height: clamp(180px, 250px, 150px);
+    }
+
+    & .is-flex-grow-1 img {
+      z-index: 10;
+      top: 0;
+      height: 100%;
+      border: 3px solid var(--theme-brown);
+    }
+    & .is-flex-grow-1 .view {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 500ms;
+      background-color: rgba(0, 0, 0, 0.34);
+      top: 0;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    & .is-flex-grow-1:hover .view {
+      opacity: 1;
+    }
+
+    & .is-flex-grow-1 .image-text {
+      font-size: var(--fs-1);
+      background: var(--theme-gradient);
+      padding-block: 10px;
+      padding-left: 3px;
+    }
+  }
+
+  .lightbox .is-flex-grow-1 .image-text,
+  .lightbox .is-flex-grow-1 .view {
+    z-index: 20;
+    color: var(--white);
+  }
+
+  .scale-in-hor-center {
+    -webkit-animation: scale-in-hor-center 0.5s
+      cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+      both;
+  }
+
+  @-webkit-keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in-hor-center {
+    0% {
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+</style>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('partials/head') %>
+    <%- include('partials/styles') %>
+      <%- include('partials/homestyles') %>
+</head>
+
+<body>
+  <%- include('partials/header') %>
+
+    <section class="hero is-medium is-relative">
+      <div class="hero-body theme-gradient z-20">
+        <div class="container">
+        <div class="owl-carousel owl2 owl-loaded">
+          <div class="columns">
+
+            <div class="column">
+              <span class="title is-uppercase is-size-1 is-size-3-mobile  has-text-white">
+                <%= hero_title%>
+              </span>
+              <h2 class="subtitle is-size-2 is-size-4-mobile has-text-white mt-1">
+                <%= hero_subtitle%>
+              </h2>
+            </div>
+            <div class="column pl-3">
+              <div class="hero-panel left-border p-2">
+                <h3 class="title is-size-3 is-size-4-mobile has-text-white">
+                  <%= hero_subtitle%>
+                </h3>
+                <p class="has-text-white">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam sed eaque minima nihil
+                  totam necessitatibus architecto earum nemo odit.
+                  <a class="brown-txt has-text-weight-bold is-underlined">learn more..</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="columns">
+
+            <div class="column">
+              <span class="title is-uppercase is-size-1 is-size-3-mobile  has-text-white">
+                Sales Of Remedias Form
+              </span>
+
+            </div>
+            <div class="column pl-3">
+              <div class="hero-panel left-border p-2">
+                <h3 class="title is-size-3 is-size-4-mobile has-text-white">
+                  Notice to all aspirants
+                </h3>
+                <p class="has-text-white">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam sed eaque minima nihil
+                  totam necessitatibus architecto earum nemo odit.
+                  <a class="brown-txt has-text-weight-bold is-underlined">learn more..</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+          <div class="columns">
+
+            <div class="column">
+              <span class="title is-uppercase is-size-1 is-size-3-mobile  has-text-white">
+                Registration Exercise
+              </span>
+
+            </div>
+            <div class="column pl-3">
+              <div class="hero-panel left-border p-2">
+                <h3 class="title is-size-3 is-size-4-mobile has-text-white">
+                  Notice to all Freshers
+                </h3>
+                <p class="has-text-white">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque quisquam sed eaque minima nihil
+                  totam necessitatibus architecto earum nemo odit.
+                  <a class="brown-txt has-text-weight-bold is-underlined">learn more..</a>
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+       </div>
+      </div>
+      <img loading="lazy" class="img-overlay z-10" src="images/graduands1.jpg" alt="">
+    </section>
+
+    <main role="main">
+      <!-- LATEST NOW -->
+      <section class="section pt-5">
+        <div class="container ">
+          <div class="columns pt-6">
+            <div class="column mr-2">
+              <h2 class="title title-line is-relative">
+                <span> Latest <span class="brown-txt">Now</span></span>
+              </h2>
+              <% latest.forEach((x)=>{ %>
+                <div class="featured-news is-flex row has-gap m-1 pb-3">
+                  <div class="news-image">
+                    <img loading="lazy" height="150" width="300" src="images/<%=x.image%>" alt="students studying">
+                  </div>
+                  <div class="news-content is-flex is-column bottom-border thin">
+                    <a class="brown-txt is-uppercase" href="">
+                      <%=x.title%>
+                    </a>
+                    <div class="menu-label"> <i class="fa-solid fa-flag"></i>
+                      <%= x.date%>
+                    </div>
+                    <%= x.body%>
+                  </div>
+                </div>
+                <% }) %>
+
+            </div>
+            <div class="column is-4-desktop">
+              <h3 class="title is-size-4-mobile title-arrow is-relative has-border theme-bg  p-2">
+                <span class="ml-3 has-text-white "> Featured News</span>
+              </h3>
+              <div class="theme-gradient is-flex is-column p-3 has-text-white quick-links">
+                <% news.forEach((news)=> { %>
+                  <a class="has-text-white" href="">
+                    <span class="icon is-small mr-1"><i class="fa-solid fa-flag"></i>
+                    </span>
+                    <%= news.body%>
+
+                  </a>
+                  <% })%>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title title-line is-relative">
+            <span> About <span class="brown-txt"> FUHSO</span></span>
+
+          </h2>
+          <div class="columns mt-6 is-vcentered">
+            <div class="column has-text-justified flow">
+              <div class="is-flex is-row is-centerdX ">
+                <img width="200" height="200" src="images/logo.png" alt=" fuhso logo">
+              </div>
+              <p>
+                Welcome to FUHSO. The Federal University of Health Sciences, Otukpo is a world-class specialized
+                University that will train and produce high-quality healthcare professionals that will contribute to the
+                development of the health sector in Nigeria, and the University will be equipped with state-of-the-art
+                equipment for research and teaching. It will be the first of..
+
+                <a class="brown-txt is-underlined pt-1"> read more &#8594;</a>
+              </p>
+            </div>
+            <div class="column has-text-justified">
+              <div class="flow">
+                <h4 class="has-text-white has-bg-brown styled-header">Our Vision</h4>
+                <p class="has-background-white box-sh styled-body">
+                  <q>To be a world class institution for learning, scientific research and innovation for developing the
+                    next generation of IT professionals</q>
+                </p>
+              </div>
+              <div class="flow mt-4">
+                <h4 class="has-text-white has-bg-brown styled-header">Our Mission</h4>
+                <p class="has-background-white box-sh styled-body">
+                  <q>To build capacity of Health care professionals through integrated medical education, professional
+                    skills and research providing access to high quality healthcare services
+                </p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY -->
+      <section class="section theme-bg is-light">
+        <div class="container  left-border">
+          <div class="columns is-centered is-flex is-column">
+            <h2 class="title is-relative has-text-white">
+              &nbsp; philosopy
+            </h2>
+            <div class="column has-text-white is-flex row wrap">
+              <span class="icon is-large size-4vw">
+                <i class="fa-solid fa-quote-left"></i>
+              </span>
+              <span class="is-size-6-mobile has-text-justified">
+                FUHSO will be a world-class University that nurtures excellence in training healthcare professionals
+                through innovation, cutting-edge research, and development, leading to the graduation of highly
+                sought-after healthcare professionals.
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--CORE VALUES  -->
+      <section class="section is-small">
+        <div class="container">
+          <h2 class="title title-line is-relative">
+            <span> Our Core <span class="brown-txt">Values - ITDAPEI</span></span>
+          </h2>
+          <div class="columns is-flex row wrap is-centerdXY mt-6 pt-3 has-gap">
+            <% values.forEach((value)=>{ %>
+              <div class="flow core-value">
+                <h4 class="has-text-white value-title styled-header is-uppercase">
+                  <%=value.title%>
+                </h4>
+                <div class="value is-flex is-row is-centerdY space-between styled-body">
+                  <img height="70" width="70" src="images/icons/<%=value.icon%>.PNG" alt="<%=value.title%>">
+                  <small class="pl-1">
+                    <%=value.body%>
+                  </small>
+                </div>
+              </div>
+              <% })%>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="container ">
+          <h2 class="title title-line is-relative">
+            <span>Frequently asked <span class="brown-txt">Questions</span> (FAQ)</span>
+          </h2>
+
+          <div class="acc-container my-6 box-sh">
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check4" checked>
+              <label class="accordion-label" for="check4">Accordion 1</label>
+              <div class="accordion-content">
+                <p>Hey there, you are watching codiesbugs &#128522;</p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check5">
+              <label class="accordion-label" for="check5">Accordion 2</label>
+              <div class="accordion-content">
+                <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check6">
+              <label class="accordion-label" for="check6">Accordion 2</label>
+              <div class="accordion-content">
+                <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+              </div>
+            </div>
+
+
+          </div>
+          <a class="is-underlined brown-txt" href="/faq">All FAQS <i class="fas fa-arrow-right"></i></a>
+
+        </div>
+      </section>
+
+      <!-- UNIVERSITY NEWS card-->
+      <section class="section">
+        <div class="container ">
+          <h2 class="title title-line is-relative mb-6">
+            <span>Top University<span class="brown-txt"> News and Blog</span></span>
+          </h2>
+
+          <div class="owl-carousel owl1 owl-theme">
+            <% cards.forEach((x)=>{%>
+              <div class="card">
+                <div class="card-image">
+                  <figure class="image is-2by1">
+                    <img src="images/<%= x.url%>" alt="Image">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="styled-border has-text-white theme-gradient pl-4">
+                    <%= x.title%>
+                  </div>
+                  <div class="content">
+                    <%= x.body%>
+                      <br>
+                      <button class="button theme-bg is-rounded is-small has-text-white"> learn more</button>
+                      <small>11:09 PM - 1 Jan 2016</small>
+                  </div>
+                </div>
+              </div>
+
+              <%})%>
+
+          </div>
+        </div>
+      </section>
+      <!-- GALLERY and EVENT -->
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column lightbox flow">
+              <h2 class="title title-line is-relative">
+                <span class="theme-color"> Gallery </span>
+              </h2>
+              <div class="is-flex row">
+                <div class="is-flex-grow-1">
+                  <img height="" width="" src="/images/student-studying.png" class="hover-shadow">
+                  <div class="view" onclick="openModal();currentSlide(1)">
+                    <span class="icon is-medium"><i class="fas fa-eye"></i></span>
+                  </div>
+                  <div class="image-text">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="is-flex-grow-1">
+                  <img height="" width="" src="/images/student-studying.png" class="hover-shadow">
+                  <div class="view" onclick="openModal();currentSlide(2)">
+                    <span class="icon is-medium"><i class="fas fa-eye"></i></span>
+                  </div>
+                  <div class="image-text">Lorem ipsum dolor sit amet.</div>
+                </div>
+              </div>
+              <div class="is-flex row">
+                <div class="is-flex-grow-1">
+                  <img height="" width="" src="/images/student-studying.png" class="hover-shadow">
+                  <div class="view" onclick="openModal();currentSlide(3)">
+                    <span class="icon is-medium"><i class="fas fa-eye"></i></span>
+                  </div>
+                  <div class="image-text">Lorem ipsum dolor sit amet.</div>
+                </div>
+                <div class="is-flex-grow-1">
+                  <img height="" width="" src="/images/student-studying.png" class="hover-shadow">
+                  <div class="view" onclick="openModal();currentSlide(3)">
+                    <span class="icon is-medium"><i class="fas fa-eye"></i></span>
+                  </div>
+                  <div class="image-text">Lorem ipsum dolor sit amet.</div>
+                </div>
+              </div>
+            </div>
+            <div class="column  flow">
+              <h2 class="title title-line is-relative">
+                <span class="theme-color"> Events</span>
+              </h2>
+
+              <% calender.forEach((x)=>{%>
+                <div class="featured-news last is-flex row has-gap">
+                  <div
+                    class="has-bg-brown is-flex is-column space-between px-5 py-1 has-text-white has-text-centered has-text-weight-bold">
+                    <span class="is-size-6 is-uppercase">
+                      <%= x.month%>
+                    </span>
+                    <span class="is-size-3 is-size-4-mobile  is-family-secondary">
+                      <%= x.day%>
+                    </span>
+                  </div>
+                  <div class="news-content is-flex is-column space-between bottom-border thin">
+                    <a class="brown-txt is-uppercase" href="">
+                      <%= x.title%>
+                    </a>
+                    <div class="menu-label"> <i class="fa-solid fa-location-dot"></i>
+                      <%= x.town%>
+                    </div>
+
+                  </div>
+                </div>
+                <% })%>
+
+
+            </div>
+          </div>
+          <div class="is-flex is-centerdX">
+            <a href="#" class="button theme-brown has-text-white is-hoverable">View more &#8594</a>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title title-line is-relative">
+            <span class="theme-color">The <span class="brown-txt">Principal</span> Staff</span>
+          </h2>
+          <div class="columns">
+            <div class="column">
+              <div class="theme-gradient mt-4 is-flex is-column is-centerdXY has-text-white p-3 space-between">
+                <img class="is-circle is-130x130 has-border" src="images/vc.jpg" alt="fuhso vc">
+                <span class="rank has-text-weight-bold is-size-5">
+                  prof. Innocent Ujah <small>mni</small>
+                </span>
+                <small class="mt-3">
+                  Vice chancellor
+                </small>
+                <span class="short-line"></span>
+                <small class="mt-3 has-text-centered">
+
+                  Innocent Achanya Otobo UJAH is a Professor of Obstetrics and Gynaecology and Consultant Obstetrician
+                  and Gynaecological Surgeon with the following qualifications;
+                  (MBBS(ABU), 1978), Fellow of the National Postgraduate Medical College of Nigeria in Obstetric and
+                  Gynaecology (FMCOG, 1988), Postgraduate Diploma in Health Services Management (1992), Honorary
+                  fellow of the Royal Society of Medicine, England (1992)...
+
+                </small>
+              </div>
+            </div>
+            <div class="column">
+              <div class="theme-gradient mt-4 is-flex is-column is-centerdXY has-text-white p-3 space-between">
+                <img class="is-circle is-130x130 has-border" src="images/vc.jpg" alt="fuhso vc">
+                <span class="rank has-text-weight-bold is-size-5">
+                  prof. Innocent Ujah <small>mni</small>
+                </span>
+                <small class="mt-3">
+                  Vice chancellor
+                </small>
+                <span class="short-line"></span>
+                <small class="mt-3 has-text-centered">
+
+                  Innocent Achanya Otobo UJAH is a Professor of Obstetrics and Gynaecology and Consultant Obstetrician
+                  and Gynaecological Surgeon with the following qualifications;
+                  (MBBS(ABU), 1978), Fellow of the National Postgraduate Medical College of Nigeria in Obstetric and
+                  Gynaecology (FMCOG, 1988), Postgraduate Diploma in Health Services Management (1992), Honorary
+                  fellow of the Royal Society of Medicine, England (1992)...
+
+                </small>
+              </div>
+            </div>
+            <div class="column">
+              <div class="theme-gradient mt-4 is-flex is-column is-centerdXY has-text-white p-3 space-between">
+                <img class="is-circle is-130x130 has-border" src="images/vc.jpg" alt="fuhso vc">
+                <span class="rank has-text-weight-bold is-size-5">
+                  prof. Innocent Ujah <small>mni</small>
+                </span>
+                <small class="mt-3">
+                  Vice chancellor
+                </small>
+                <span class="short-line"></span>
+                <small class="mt-3 has-text-centered">
+
+                  Innocent Achanya Otobo UJAH is a Professor of Obstetrics and Gynaecology and Consultant Obstetrician
+                  and Gynaecological Surgeon with the following qualifications;
+                  (MBBS(ABU), 1978), Fellow of the National Postgraduate Medical College of Nigeria in Obstetric and
+                  Gynaecology (FMCOG, 1988), Postgraduate Diploma in Health Services Management (1992), Honorary
+                  fellow of the Royal Society of Medicine, England (1992)...
+
+                </small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- STUDENTS CONTACT -->
+      <section class="is-relative">
+        <div class="is-relative z-20 theme-brown">
+          <div class="container p-4">
+            <span class="is-uppercase title has-text-white">get in touch with <span class="theme-color">FUHSO
+                Students</span>
+              </span> <br> <br>
+            <p class="has-text-white">have any questions about students experience in fuhso? chat with some of our
+              students</p> <br>
+            <p>
+              <button class="button is-rounded theme-bg has-text-white">Chat with a student</button>
+            </p>
+          </div>
+        </div>
+        <img loading="lazy" class="img-overlay z-10" src="images/students.jpg" alt="fuhso students">
+      </section>
+
+    </main>
+
+    <!-- The Modal/Lightbox -->
+    <div class="modal" id="modal">
+      <div class="modal-background"></div>
+      <div class="modal-content scale-in-hor-center">
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <img height="800" width="650" src="/images/student-studying.png" style="width:100%;height:80%;">
+
+
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <img height="800" width="650" src="/images/student-studying.png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <img height="800" width="650" src="/images/student-studying.png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <img height="800" width="650" src="/images/student-studying.png" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="columns is-mobile is-gapless">
+          <div class="column">
+            <img class="demo" height="400" width="400" src="/images/student-studying.png"
+              onclick="openModal();currentSlide(1)" alt="students">
+          </div>
+
+          <div class="column">
+            <img class="demo" height="400" width="400" src="/images/student-studying.png"
+              onclick="openModal();currentSlide(2)" alt="graduands">
+          </div>
+
+          <div class="column">
+            <img class="demo" height="400" width="400" src="/images/student-studying.png"
+              onclick="openModal();currentSlide(3)" alt="graduands">
+          </div>
+
+          <div class="column">
+            <img class="demo" height="400" width="400" src="/images/student-studying.png"
+              onclick="openModal();currentSlide(4)" alt="graduands">
+          </div>
+        </div>
+      </div>
+      <button onclick="closeModal('modal')" class="modal-close is-large" aria-label="close"></button>
+    </div>
+    <div class="modal" id="modal2">
+      <div class="modal-background"></div>
+      <div class="modal-card br-15 scale-in-hor-center">
+        <header class="modal-card-head transparent p-1 is-flex is-justify-content-flex-end">
+
+          <button onclick="closeModal('modal2')" class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body transparent">
+          <small class="menu-label is-uppercase letter-space theme-color has-text-weight-semibold">dont
+            miss out any information</small>
+          <p class="modal-card-title brown-txt is-uppercase is-size-6-mobile has-text-weight-semibold mt-4">
+            subscribe to our news letter 
+          </p>
+          <p class="mt-1">
+            Get important updates on
+          <ul class="theme-list">
+            <li>campus activities/events</li>
+            <li>Admissions</li>
+            <li>staff recruitment</li>
+            <li>and more....</li>
+          </ul>
+          </p>
+          <form class="mt-4" action="">
+
+            <div class="field">
+              <div class="control has-icons-left has-icons-right">
+                <input class="input is-rounded has-border thin" type="email" placeholder="enter your email" required>
+                <span class="icon is-small is-left">
+                  <i class="fas fa-envelope"></i>
+                </span>
+
+              </div>
+            </div>
+            <button class="button is-rounded theme-brown has-text-white" type="submit" style="width:100%;" 
+            class="theme-brown py-4 has-text-white"> Subscribe &nbsp; <i class="fa-solid fa-paper-plane"></i></button>
+
+
+          </form>
+
+        </section>
+        <footer class="modal-card-foot theme-gradient">
+          <!-- <button class="has-background-white">Subscribe  <i class="fa-solid fa-paper-plane"></i></button>
+      <button onclick="closeModal('modal2')" class="button is-white">Cancel</button> -->
+        </footer>
+      </div>
+    </div>
+
+    <%- include('partials/footer') %>
+      <%- include('partials/top') %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js" integrity="sha512-rCjfoab9CVKOH/w/T6GbBxnAH5Azhy4+q1EXW5XEURefHbIkRbQ++ZR+GBClo3/d3q583X/gO4FKmOFuhkKrdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <%- include('partials/scripts') %>
+          <script>
+            /////////////NEWSLETTER subscription popup/////////////////
+            let modal2 = document.querySelector('#modal2');
+
+            window.addEventListener('DOMContentLoaded', () => {
+              var popup = localStorage.getItem('p');
+              if (!popup) {
+                setTimeout(() => {
+                  modal2.classList.add('is-active')
+                  localStorage.setItem('popu', true) 
+                }, 3000)
+              }
+            })
+
+
+          </script>
+          <script>
+            $(() => {
+              var owl = $('.owl1');
+              owl.on('mousewheel', '.owl-stage', function (e) {
+              if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+              } else {
+                owl.trigger('prev.owl');
+              }
+              e.preventDefault();
+            });
+
+              owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                responsiveClass: true,
+                responsive: {
+                  0: {
+                    items: 1,
+                    nav: false,
+                    autoHeight: true
+                  },
+                  600: {
+                    items: 3,
+                    nav: false
+                  },
+                  1000: {
+                    items: 4,
+                    nav: false,
+                  }
+                }
+              });
+              var owl2 = $('.owl2');
+            
+              owl2.owlCarousel({
+                items: 1,
+                autoHeight: true,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                nav: true,
+              });
+            })
+           
+            // $('.play').on('click', function () {
+            //   owl.trigger('play.owl.autoplay', [1000])
+            // })
+            // $('.stop').on('click', function () {
+            //   owl.trigger('stop.owl.autoplay')
+            // })
+
+
+          </script>
+</body>
+
+</html>

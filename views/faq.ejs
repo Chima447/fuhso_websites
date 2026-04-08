@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head') %>
+  <%- include('partials/styles') %>
+  <style>
+    .tabs li a{
+        background-color: #f1f1f165;
+        border: 2px solid rgba(178, 178, 178, 0.592);
+    }
+ 
+    .tabs li.is-active a{
+        background: var(--theme-gradient);
+        color: #fff;
+     }
+
+  </style>
+</head>
+<body>
+    <%- include('partials/header') %>
+<div class="is-flex row is-justify-content-space-between">
+<%- include('partials/sidebar') %>
+<main role="main" class="has-aside-sibling">
+  <div class="has-background-white p-4">
+    <h2 class="title title-line is-relative mt-4">
+      <span> FREQUENTLY ASKED <span class="brown-txt">QUESTIONS</span></span>
+ </h2> 
+ <p class="mt-6 has-text-justified">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ratione libero accusamus maiores expedita eum aliquid provident, eos illum enim dolor quisquam ex, corporis eligendi unde beatae fuga quis animi reprehenderit, fugit quam. Iste, ullam sit blanditiis distinctio magni odit doloribus accusamus suscipit eaque vel veniam dolor impedit rem possimus doloremque officia quis quo praesentium error. Porro mollitia consequatur recusandae?
+
+ </p>
+ <nav class="tabs is-centered mt-6">
+    <ul>
+      <li class="tab is-active" onclick="openTab(event,'Nstudent')"><a >N. Students</a></li>
+      <li class="tab" onclick="openTab(event,'Rstudent')"><a >R. Students</a></li>
+      <li class="tab" onclick="openTab(event,'staff')"><a >Staff</a></li>
+    </ul>
+ </nav>
+<div class="acc-container">
+  <div id="Rstudent"  class="content-tab" >
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check1" checked>
+      <label class="accordion-label" for="check1">Accordion 1</label>
+      <div class="accordion-content">
+        <p>Hey there, you are watching codiesbugs &#128522;</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check2">
+      <label class="accordion-label" for="check2">Accordion 2</label>
+      <div class="accordion-content">
+        <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check3">
+      <label class="accordion-label" for="check3">Accordion 3</label>
+      <div class="accordion-content">
+        <p>If you liked then don't forget to subscribe the channel for latest videos. </p>
+      </div>
+    </div>
+  </div>
+  <div id="Nstudent" class="content-tab" style="display:none">
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check4" checked>
+      <label class="accordion-label" for="check4">Accordion 1</label>
+      <div class="accordion-content">
+        <p>Hey there, you are watching codiesbugs &#128522;</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check5">
+      <label class="accordion-label" for="check5">Accordion 2</label>
+      <div class="accordion-content">
+        <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check6">
+      <label class="accordion-label" for="check6">Accordion 3</label>
+      <div class="accordion-content">
+        <p>If you liked then don't forget to subscribe the channel for latest videos. </p>
+      </div>
+    </div>
+  </div>
+  <div id="staff" class="content-tab" style="display:none">
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check7" checked>
+      <label class="accordion-label" for="check7">Accordion 1</label>
+      <div class="accordion-content">
+        <p>Hey there, you are watching codiesbugs &#128522;</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check8">
+      <label class="accordion-label" for="check8">Accordion 2</label>
+      <div class="accordion-content">
+        <p>I hope you are enjoing the video, don't forget to give your feedback in comment section</p>
+      </div>
+    </div>
+    <div class="accordion">
+      <input type="radio" name="radio-a" id="check9">
+      <label class="accordion-label" for="check9">Accordion 3</label>
+      <div class="accordion-content">
+        <p>If you liked then don't forget to subscribe the channel for latest videos. </p>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+      
+       
+  </div>
+</main>
+</div>
+
+<%- include('partials/footer') %>
+<%- include('partials/top') %>
+<%- include('partials/scripts') %>
+
+</body>
+</html>
