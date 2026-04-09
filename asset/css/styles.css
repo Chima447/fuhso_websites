@@ -319,11 +319,12 @@ body {
   background: transparent;
 }
 
-.featured-news .news-image img {
-  height: 100%;
-  object-fit: fill;
+.news-image{
+  width: 300px;
 }
-
+.news-content{
+  width: 75%;
+}
 /* title arrow class in media query */
 .title-arrow {
   border-left: 7px solid var(--theme-brown);
@@ -676,12 +677,6 @@ main {
   .featured-news:not(.last) {
     flex-wrap: wrap;
   }
-
-  .featured-news .news-image img {
-    width: 80vw;
-    height: 210px;
-  }
-
   .footer .left-border.thin {
     border-left-color: transparent;
   }

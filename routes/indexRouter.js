@@ -32,8 +32,9 @@ const news = [
 // Route to render index.ejs when visiting the root URL
 router.get("/", (req, res) => {
   const text =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt non eaque consequuntur est unde aliquam magnam, aspernatur debitis corrupti nesciunt";
+    "The Federal University of Health Sciences, Otukpo has announced the commencement of the 2024 academic session with enhanced facilities and expanded scholarship programs. The university continues to strengthen partnerships with international health organizations to improve research and clinical training. Students are encouraged to register early and familiarize themselves with new academic policies. The institution remains committed to producing world-class healthcare professionals.";
   const text1 = text.slice(0, 45);
+
   const latest = [
     { image: "coat.jpg", title: text1, date: "January 20", body: text },
     {

@@ -93,23 +93,23 @@
       <section class="section pt-5">
         <div class="container ">
           <div class="columns pt-6">
-            <div class="column mr-2">
+            <div class="column ">
               <h2 class="title title-line is-relative">
                 <span> Latest <span class="brown-txt">Now</span></span>
               </h2>
               <% latest.forEach((x)=>{ %>
                 <div class="featured-news is-flex row has-gap m-1 pb-3">
                   <div class="news-image">
-                    <img loading="lazy" height="150" width="300" src="/images/<%=x.image%>" alt="students studying">
+                    <img loading="lazy" src="/images/<%=x.image%>" alt="<%=x.image%>">
                   </div>
-                  <div class="news-content is-flex is-column bottom-border thin">
-                    <a class="brown-txt is-uppercase" href="">
+                  <div class="news-content is-flex is-column">
+                    <a class="brown-txt is-uppercase is-underlined" href="#">
                       <%=x.title%>
                     </a>
                     <div class="menu-label"> <i class="fa-solid fa-flag"></i>
                       <%= x.date%>
                     </div>
-                    <%= x.body%>
+                    <%= x.body.length > 100 ? x.body.slice(0, 150) + '  ...' : x.body %>
                   </div>
                 </div>
                 <% }) %>
@@ -211,7 +211,7 @@
                   <%=value.title%>
                 </h4>
                 <div class="value is-flex is-row is-centerdY space-between styled-body">
-                  <img height="70" width="70" src="/images/icons/<%=value.icon%>.PNG" alt="<%=value.title%>">
+                  <img height="70" width="70" src="/images/icons/<%=value.icon%>.png" alt="<%=value.title%>">
                   <small class="pl-1">
                     <%=value.body%>
                   </small>
@@ -271,17 +271,17 @@
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-2by1">
-                    <img src="images/<%= x.url%>" alt="Image">
+                    <img src="/images/<%= x.url%>" alt="Image">
                   </figure>
                 </div>
                 <div class="card-content">
-                  <div class="styled-border has-text-white theme-gradient pl-4">
+                  <div class="styled-border has-text-white theme-gradient pl-4 is-uppercase">
                     <%= x.title%>
                   </div>
-                  <div class="content">
-                    <%= x.body%>
+                  <div class="content mt-2 is-size-6">
+                    <%= x.body.length > 100 ? x.body.slice(0, 150) + '  ...' : x.body %>
                       <br>
-                      <button class="button theme-bg is-rounded is-small has-text-white"> learn more</button>
+                      <button class="button theme-bg is-rounded is-small has-text-white mt-2"> learn more</button>
                       <small>11:09 PM - 1 Jan 2016</small>
                   </div>
                 </div>
@@ -326,7 +326,7 @@
                 </div>
                 <div class="is-flex-grow-1">
                   <img height="" width="" src="/images/student-studying.png" class="hover-shadow">
-                  <div class="view" onclick="openModal();currentSlide(3)">
+                  <div class="view" onclick="openModal();currentSlide(4)">
                     <span class="icon is-medium"><i class="fas fa-eye"></i></span>
                   </div>
                   <div class="image-text">Lorem ipsum dolor sit amet.</div>
