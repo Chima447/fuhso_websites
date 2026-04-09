@@ -2,8 +2,6 @@ const express = require("express");
 const router = express.Router();
 const debug = require("debug")("app");
 
-
-
 const text2 = "FUHSO COLLABORATE WITH WAC-EID ";
 const descrip =
   "The Federal University of Health Sciences, Otukpo specialized University that will train and produce high-quality healthcare professionals that will contribute to the development of the health sector in Nigeria";
@@ -31,7 +29,6 @@ const news = [
   },
 ];
 
-
 // Route to render index.ejs when visiting the root URL
 router.get("/", (req, res) => {
   const text =
@@ -40,7 +37,7 @@ router.get("/", (req, res) => {
   const latest = [
     { image: "coat.jpg", title: text1, date: "January 20", body: text },
     {
-      image: "student-studying.PNG",
+      image: "coat.jpg",
       title: text1,
       date: "February 20",
       body: text,
